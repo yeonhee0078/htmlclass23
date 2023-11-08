@@ -1,6 +1,19 @@
 <html>
     <head>
+        <title>test 1108</title>
+        <script>
+            function test2Click() {
+                alert("this is alarm");
+            }
+        </script>
+        <style>
+            fieldset {
+                background-color: lightpink;
+                color: rgb(178, 44, 89);
+                width: 500px;
+            }
 
+        </style>
     </head>
     <body>
         <form>
@@ -8,7 +21,8 @@
                 <legend>배송지 주소</legend>
                 <ol>
                     <li>
-                        주소 <input type="text" name="address" l>
+                        주소 <br>
+                        <input type="text" name="address" maxlength="">
                     </li>
                     <li>
                         우편번호 <input type="text" name="address">
@@ -17,10 +31,34 @@
 
                 <ol>
                     <li>
-                        <legend></legend>
+                        <fieldset style="background-color: orange;">
+                            <legend>카드 정보 입력</legend>
+                            <ol>
+                                <li><input type="radio" name="" value="visa">visa</li>
+                                <li><input type="radio" name="" value="AmEx">AmEx</li>
+                                <li><input type="radio" name="" value="Mastercard">Mastercard</li>
+                            </ol>
+                        </fieldset>
                     </li>
+                        <li>신청갯수<input type="number" name="applicaitonNum"></li>
+                        <li>우편번호<input type="text" name="addressNum"></li>
                 </ol>
             </fieldset>
         </form>
+        이메일 <input type="text" name="email"><br>
+        비밀번호 <input type="password" name="password"><br>
+        숫자 <input type="number" name="number"><br>
+        범위 <input type="range" name="range"><br>
+        색상 <input type="color" name="color"><br>
+
+        <p>Please select your hobby :</p>
+        <input type="checkbox" name="piano" value="piano">piano
+        <input type="checkbox" name="singingSongs" value="singingSongs">singing songs
+
+        <p>Please select your sex :</p>
+        <input type="radio" nasex value="">남성
+        <input type="radio" name="" value="">여성
+        <button onclick="test2Click()">alarm</button>
+
     </body>
 </html>
