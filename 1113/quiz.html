@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>youngint quiz</title>
+        <link rel="stylesheet" href="/1113/style.css">
+
+        <style>
+            body {
+                background-color: lightblue;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }     
+
+            .container {
+                width: 500px; height: 400px;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px 2px rgba(100,100,100,0.2);
+                display: flex;
+                flex-direction:column;
+                justify-content: space-between;
+                overflow: hidden;
+            }
+
+            h2 {
+                padding-top: 40px;
+                padding-bottom: 20px;
+                text-align: center;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            ul li {
+                margin: 16px;
+            }
+
+            ul li label {
+                font-size: 18px;
+                /* font-weight: bold; */
+            }
+            
+            button {
+                width: 100%; height: 50px;
+                color: white;
+                background-color: blueviolet;
+                font-size: 20px;
+                border: none;
+            }
+        </style>
+
+        <script>
+            function sendFn () {
+                const result = document.querySelectorAll('.quiz');
+                console.log("result", result);
+
+                result.forEach(el=>{
+                    console.log("el : ",el);
+                    if(el.checked && el.value === "d") {
+                        console.log("good");
+                        console.log("d");
+                    } else{
+                        console.log("bad");
+                    }
+                })
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="quiz">
+                <h2>우리 회사 이름을 뭘까요?</h2>
+                <ul>
+                    <li><input type="radio" name="quiz" class="quiz" value="a">
+                        <label>영내셔널</label> 
+                    </li>
+                    <li><input type="radio" name="quiz" class="quiz" value="b">
+                        <label>영은내셔널</label> 
+                    </li>
+                    <li><input type="radio"name="quiz"  class="quiz" value="c">
+                        <label>영인터</label>
+                    </li>
+                    <li><input type="radio" name="quiz" class="quiz" value="d">
+                        <label>영인터내셔널</label>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <!-- 보내기 버튼 넣는 공간 -->
+                <button onClick="sendFn()"> 보내기 </button>
+            </div>
+        </div>
+        
+        <script>
+            console.log("Hello, I'm yeonhee.");
+            console.log(123);
+            console.log("yeonheeKim", 123);
+
+            let str = "String";
+
+            let value = 1107;
+            console.log(value);
+
+            let result = 2+88;
+            console.log(result);
+
+            console.log(str + result);
+
+            let arr = [11, 12, 13, 14];
+            console.log(arr);
+            console.log(arr[1]); // start is 0
+        </script>
+
+    </body>
+</html>
