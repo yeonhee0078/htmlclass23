@@ -60,9 +60,16 @@
                     console.log("el : ",el);
                     if(el.checked && el.value === "d") {
                         console.log("good");
-                        console.log("d");
+                        quiz.innerHTML = `
+                        <h2>정답입니다</h2>
+                        <button onClick="location.reload()">재시도</button>
+                        `;
                     } else{
                         console.log("bad");
+                        quiz.innerHTML = `
+                        <h2>틀렸습니다.</h2>
+                        <button onClick="location.reload()">재시도</button>
+                        `;
                     }
                 })
 
@@ -71,8 +78,8 @@
         </script>
     </head>
     <body>
-        <div class="container">
-            <div class="quiz">
+        <div class="container" id="quiz">
+            <div class="quiz-header">
                 <h2>우리 회사 이름을 뭘까요?</h2>
                 <ul>
                     <li><input type="radio" name="quiz" class="quiz" value="a">
