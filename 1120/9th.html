@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+     <title>Document</title>
+     <script>
+        let inputNum = 32;
+
+        //  if문 연습하기
+        if (inputNum % 2 == 0) {
+            console.log("inputNum : " + "짝수입니다.");
+        }
+
+        if (inputNum % 2 == 1) {
+            console.log("inputNum : " + "홀수입니다");
+        }
+
+        //  if-else문 연습하기
+        let inputNum2 = 33;
+        if (inputNum2 % 2 == 0) {
+            console.log("inputNum2 : " + "짝수입니다2");
+        }else{
+            console.log("inputNum2 : " + "홀수입니다2");
+        }
+
+        // 현재 시간 날짜 보기
+        let date = new Date();
+        console.log("date : ", date);
+
+        let hours = date.getHours();
+        console.log("hour :", hours);
+
+        if(hours < 10) {
+            console.log("아침 먹을 시간");
+        }else if(hours < 14) {
+            console.log("점심 먹을 시간");
+        }else{
+            console.log("저녁 먹을 시간");
+        }
+
+        // 학점으로 표현해보기
+        let score = 33;
+        
+        if(score >= 90) {
+            console.log("A학점입니다.");
+        }else if(score >= 80){
+            console.log("B학점입니다.");
+        }else if(score >= 70){
+            console.log("C학점입니다.");
+        }else if(score >= 60) {
+            console.log("D학점입니다.");
+        }else{
+            console.log("F학점입니다.");
+        }
+        
+        // 포문
+        for (let i = 1; i <= 10; i++) {
+            console.log(i +"\n");
+        }
+        + "\n"
+        console.log(7+"단 시작");
+
+        for (let i = 1; i <= 10; i++){
+            console.log(7*i);
+             + "\n"
+        }
+
+
+
+        // 재미로 만들어 본
+        let message = "여니짱은 배고파영";
+        
+        console.log("지금은", hours, "시", message);
+         
+        
+     </script>
+</head>
+<body>
+    콘솔을 확인해 보세요 <br><br>
+    <img src="https://i.pinimg.com/564x/bb/0c/44/bb0c4472ee0f79f88c1be8f5639781fa.jpg" alt="">
+
+    
+</body>
+</html>
