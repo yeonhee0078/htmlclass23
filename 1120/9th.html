@@ -2,6 +2,16 @@
 <head>
      <title>Document</title>
      <script>
+        function showCat() {
+            console.log("고양이가 많는 도시는 고양시");
+            container.innerHTML = `<h2>고양이가 나타낫습니다</h2>
+            <img width="300px" src ="https://i.pinimg.com/564x/75/d3/10/75d310b13625f1378cabf952d2ad4eb0.jpg">
+            <p>고얌미</p>`;
+        }
+     </script>
+</head>
+<body>
+    <script>
         let inputNum = 32;
 
         //  if문 연습하기
@@ -59,8 +69,7 @@
         console.log(7+"단 시작");
 
         for (let i = 1; i <= 10; i++){
-            console.log(7*i);
-             + "\n"
+            console.log(7 + " X " + i + " = "+(7*i));
         }
 
 
@@ -70,13 +79,28 @@
         
         console.log("지금은", hours, "시", message);
          
-        
-     </script>
-</head>
-<body>
-    콘솔을 확인해 보세요 <br><br>
-    <img src="https://i.pinimg.com/564x/bb/0c/44/bb0c4472ee0f79f88c1be8f5639781fa.jpg" alt="">
+       // 삼항 연산자
+       let temp=22;
+       console.log(temp%2 === 0 ? "삼항 연산자-true" : "삼항 연산자-false")
 
+       if(temp%2 === 0) {
+        console.log("if-true");
+       }else {
+        console.log("if-false");
+       }
+    </script>
+
+    <p>콘솔을 확인해 보세요</p>
+    
+    <img src="https://i.pinimg.com/564x/bb/0c/44/bb0c4472ee0f79f88c1be8f5639781fa.jpg" alt="">
+    
+    <br>
+    
+    <button onclick="showCat()">고얌미 보기</button>
+    
+    <div id="container">
+
+    </div>
     
 </body>
 </html>
