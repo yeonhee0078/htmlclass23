@@ -1,0 +1,28 @@
+
+.textYeonHeeKim {
+    text-align: center;
+    font-size: 100px;
+    margin-top: 327px;
+    font: normal normal normal 120px Galmuri11;
+    color: #707070;
+    
+}
+
+
+.tagContainer{
+    display: flex;
+    margin-top: 37px;
+
+}
+.designTag{
+    padding: 5px 20px 5px 20px;
+    border-radius: 50px;
+    margin-left: 20px;
+    text-align: center;
+    font: normal normal normal 24px Galmuri11;
+    letter-spacing: 0px;
+    color: #707070;
+    height: 36px;
+    border: 2px solid #707070;
+    line-height: 18px;
+}

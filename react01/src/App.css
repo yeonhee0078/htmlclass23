@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -27,13 +27,13 @@
 }
 
 .App-link {
-  color: #61dafb;
+
 }
 
 
 /* 1127 img slider */
 
-.slider {
+/* .slider {
   position:relative;
   width: 100%;
   box-sizing: border-box;
@@ -76,5 +76,8 @@
 
 .right-arrow {
   right: 5%;
-}
+} */
 
+html{
+  background-color: #fff;
+}

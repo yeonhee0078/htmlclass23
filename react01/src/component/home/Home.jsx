@@ -1,46 +1,54 @@
 import "./style.css"
+import "../../portfolio.css"
 import { useState } from 'react';
 import { useEffect } from 'react';
 
 const Home = () => {
 
-
-    const [weight, setWeight] = useState(40);
-    const [height, setHeight] = useState(140);
-    const [bmi, setBmi] = useState(40.2);
-    const [output, setOutput] =useState();
+{
+ // const [weight, setWeight] = useState(40);
+    // const [height, setHeight] = useState(140);
+    // const [bmi, setBmi] = useState(40.2);
+    // const [output, setOutput] =useState();
   
   
-    function onWeightChange(event) {
-      console.log(event.target.value);
-      setWeight(event.target.value);
-    }
-    // function onWeightChange (num) {
-    //   console.log(num.target.value);
+    // function onWeightChange(event) {
+    //   console.log(event.target.value);
+    //   setWeight(event.target.value);
     // }
+    // // function onWeightChange (num) {
+    // //   console.log(num.target.value);
+    // // }
     
-    function onHeightChange(event) {
-      console.log(event.target.value);
-      setHeight(event.target.value);
-    }
-    // function onHeightChange (num) {
-    //   console.log(num.target.value);
+    // function onHeightChange(event) {
+    //   console.log(event.target.value);
+    //   setHeight(event.target.value);
     // }
-    //  const [bmi, setBmi] = useState(20.4);
+    // // function onHeightChange (num) {
+    // //   console.log(num.target.value);
+    // // }
+    // //  const [bmi, setBmi] = useState(20.4);
   
-    useEffect(() => {
-      setBmi(weight / (height / 100) * (height / 100));
-       //document.querySelector('.yourBMI').innerHTML = bmi;
-       console.log("bmi:"+bmi);
-       setOutput(bmi);
+    // useEffect(() => {
+    //   setBmi(weight / (height / 100) * (height / 100));
+    //    //document.querySelector('.yourBMI').innerHTML = bmi;
+    //    console.log("bmi:"+bmi);
+    //    setOutput(bmi);
   
-    },[weight, height]);
+    // },[weight, height]);
   
-  
+}
   
     return (
-     <div className="App">
-        <div className="container">
+      <div className="contentBox">
+        <div className='textYeonHeeKim'>YeonHee Kim</div>
+        <div className='tagContainer'>
+          <div className='designTag'>#uxui</div>
+          <div className='designTag'>#product</div>
+          <div className='designTag'>#package</div>
+          <div className='designTag'>#content</div>
+        </div>
+        {/* <div className="container">
           <div className="title">
             Project7 : BMI CALCULATOR
           </div>
@@ -54,7 +62,7 @@ const Home = () => {
              <p>Your BMI is</p>
            <div className="yourBMI">{output}</div>
           </div>
-        </div>
+        </div> */}
       </div>
   
     );

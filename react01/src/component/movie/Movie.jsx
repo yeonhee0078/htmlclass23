@@ -28,40 +28,42 @@ const IMG_API = `https://image.tmdb.org/t/p/w780`;
 const SEARCH_API = `https://api.themoviedb.org/3/search/movie?&api_key=${APIKEY}&query=`;
 
 const Movie = () => {
- const [movieInfoList, setMovieInfos] = useState([]);
- const [movieTitle, setMovieTitle] = useState("")
- const [searchedMovie, setSearchedMovie] = useState()
+const [movieInfoList, setMovieInfos] = useState([]);
+const [movieTitle, setMovieTitle] = useState("")
+const [searchedMovie, setSearchedMovie] = useState()
 
- const getMovieInfos = async () => {        
+const getMovieInfos = async () => {        
     const res =  await fetch(NOWPLAYING_API)
     const data = await res.json();
     setMovieInfos(data.results);
 }
 
 const onSearch = async() => {
-  
-  const res =  await fetch(SEARCH_API+movieTitle)
-  const data = await res.json()
-  setSearchedMovie(data.results);
 
-  console.log("검색버튼 클릭 : ", data);
+const res =  await fetch(SEARCH_API+movieTitle)
+const data = await res.json()
+setSearchedMovie(data.results);
+
+console.log("검색버튼 클릭 : ", data);
 
 }
 const [open, setOpen] = useState(false);
 const [detailMovie, setDetailMovie] = useState();
+
 const handleOpen = (movieinfo) => {
     console.log(movieinfo);
     setOpen(true);
     setDetailMovie(movieinfo);
+    console.log(detailMovie);
 }
+
 const handleClose = () => setOpen(false);
 
- useEffect(()=>{
+useEffect(()=>{
     getMovieInfos();
- },[])
+},[])
 
 
-  
     return(
         <div style={{margin:10}}>
             <input type="text" placeholder='영화제목을 입력해주세요' onChange={(e)=>setMovieTitle(e.target.value)}/>
@@ -73,9 +75,11 @@ const handleClose = () => setOpen(false);
                     <Card sx={{ maxWidth: 345 }}>
                     <CardMedia
                       sx={{ height: 140 }}
-                      image={IMG_API+detailMovie.backdrop_path}
                       title="green iguana"
                       />
+                    {/* <img src={IMG_API+detailMovie.backdrop_path} style={{width:"100%"}}/> */}
+
+
 
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
@@ -132,7 +136,7 @@ const handleClose = () => setOpen(false);
                 </Typography>
                 <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                     {detailMovie?.overview ?? ""}
-                    <img src={IMG_API+detailMovie.backdrop_path} style={{width:"100%"}}/>
+                    {/* <img src={IMG_API+detailMovie.backdrop_path} style={{width:"100%"}}/> */}
                 </Typography>
                 </Box>
             </Modal>
