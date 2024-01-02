@@ -38,7 +38,7 @@
 
 .cardImage {
     width: 410px; height: 355px;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     overflow: hidden;
     display: flex;
     justify-content: center;

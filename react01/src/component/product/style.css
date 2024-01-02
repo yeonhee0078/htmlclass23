@@ -38,7 +38,7 @@
 
 .cardImage {
     width: 410px; height: 355px;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -68,6 +68,7 @@
 .cardContent .cardSmallText {
     font: normal normal normal 16px Galmuri11;
     color: #707070;
+    line-height : 26x;
 }
 
 .moreButton {

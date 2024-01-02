@@ -24,7 +24,7 @@ function App() {
     <Router>
       <div className='navigationBar'>
         <div className='pageHome'>
-          <NavLink className='pageName' to="/home">Portfolio</NavLink>
+          <NavLink className='pageName' to="/">Portfolio</NavLink>
         </div>
         <div className='pages'>
           <NavLink className='pageName' to="/about">About</NavLink>
@@ -40,7 +40,7 @@ function App() {
       <Routes>
         <Route
           exact
-          path='/home'
+          path='/'
           element={<Home />}
           />
         <Route
