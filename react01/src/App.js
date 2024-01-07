@@ -24,7 +24,10 @@ function App() {
     <Router>
       <div className='navigationBar'>
         <div className='pageHome'>
-          <NavLink className='pageName' to="/">Portfolio</NavLink>
+          <div className='img' />
+          <NavLink className='pageName' to="/">
+            Portfolio
+          </NavLink>
         </div>
         <div className='pages'>
           <NavLink className='pageName' to="/about">About</NavLink>

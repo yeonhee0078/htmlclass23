@@ -41,12 +41,22 @@ const Home = () => {
   
     return (
       <div className="contentBox">
-        <div className='textYeonHeeKim'>YeonHee Kim</div>
+        <div id='textYeonHeeKim' className="text-shadow-pop-br" >
+          <div>YeonHee Kim</div> 
+        </div>
         <div className='tagContainer'>
-          <div className='designTag'>#uxui</div>
-          <div className='designTag'>#product</div>
-          <div className='designTag'>#package</div>
-          <div className='designTag'>#content</div>
+          <div className='designTag'>
+            <img src='./image/tag_designer.png' />
+          </div>
+          <div className='designTag'>
+            <img src='./image/tag_uxui.png' />
+          </div>
+          <div className='designTag'>
+            <img src='./image/tag_product.png' />
+          </div>
+          <div className='designTag'>
+            <img src='./image/tag_content.png' />
+          </div>
         </div>
         {/* <div className="container">
           <div className="title">

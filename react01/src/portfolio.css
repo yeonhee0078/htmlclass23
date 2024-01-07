@@ -1,3 +1,8 @@
+@font-face{
+    font-family:'bitbit';
+    src:url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff'),url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2') ;
+  }
+
 * {
     text-decoration: none;
     box-sizing: border-box;
@@ -5,29 +10,71 @@
     background-color: rgb(255, 255, 255, 0);
 }
 
+
 .App{
-    background-color: #ECECEC; 
+    background-color: #2B2B2B; 
+    
 }
 .navigationBar{
     width: 100%; height: 50px;
-    background-color: #fff;
+    background-color: none;
     display: flex;
     align-items: center;
     justify-content:space-between;
     padding-left: 160px;
     padding-right: 160px;
+    border-bottom: 2px solid #7fffd4;
 
 }
 
 .navigationBar .pageName {
     font: normal normal normal 18px/24px Galmuri11;
-    color: #707070;
+    color: aquamarine;
     margin-right: 50px;
+    text-align: center;
+    padding: 2px 15px 5px 15px;
 }
 
-.navigationBar .pageName:hover, 
-.navigationBar .pageName:focus {
-    color: aquamarine;
+.pageHome .pageName,
+.pageHome .pageName:focus {
+    padding:0;
+    background-color: none;
+}
+
+.pageHome {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+.pageHome .img {
+    width: 38px; height: 36px;
+    margin-right: 10px;
+    background-image: url(/public/image/logo_home_o.svg);
+}
+
+.pageHome:hover .pageName {
+    color: #fff;
+}
+
+.pageHome:hover .img {
+    background-image: url(/public/image/logo_home.svg);
+}
+
+
+.pages .pageName:focus {
+    color: rgb(255, 255, 255);
+    background-color: none;
+    text-decoration: underline;
+   
+}
+
+.pages .pageName:hover {
+    color: #2B2B2B;
+    background-color: #80ffd4;
+    border: 0px solid aquamarine;
+    border-radius: 50px;
+    
 }
 
  .pages .pageName:last-child {
@@ -36,11 +83,10 @@
 
 
 .contentBox {
-    width: 100%; height: 1000px;
+    width: 100%; height: 1080px;
     padding-left: 160px;
     padding-right: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }

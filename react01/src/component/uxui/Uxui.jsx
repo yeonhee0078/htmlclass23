@@ -46,11 +46,12 @@ const Product = () => {
         </div>
          <div className="cardContainer">
           {uxuiData.map((itData) => 
-          <Card className="card" 
-          style={{ 
+          <Card className="card"
+          style={{
+            boxShadow: "12px 12px 3px #7fffd4",
             borderRadius: "20px",
-            boxShadow: "none"
-            }}>
+            backgroundColor: "#2B2B2B"
+          }}>
             <div className="cardImage">
             <img src={'./image/'+itData.imgUrl} />
             </div>
@@ -79,45 +80,77 @@ const Product = () => {
           className="Modal"
           style={{
             width : "1596px", height : "773px",
-            border : "0px",
+            border : "2px solid aquamarine",
             borderRadius : "20px",
             display : "flex",
             paddingLeft: "36px", 
-            paddingTop: "40px"
+            paddingTop: "40px",
+            backgroundColor : "#2B2B2B",
+            color : "aquamarine"
           }}>
             <div className="modal_image">
               <img src={'./image/'+detailData?.imgUrl ?? ""}
               style={{
                 width: "1100px", height: "700px",
-                marginRight : "55px"
-
+                marginRight : "55px",
+                border : "2px solid aquamarine",
               }} />
             </div>
             <div className="modal_text"
             style={{
-              width : "360px"
+              width : "360px",
+              display : "flex",
+              flexDirection : "column",
+              justifyContent : "space-between"
             }}>
               <Typography id="modal-modal-title" variant="h6" component="h2"
               style={{
-                marginBottom: "88px",
+                // marginBottom: "88px",
                 font: "normal normal normal 22px Galmuri11"
               }}>
                 {detailData?.title ?? ""}
               </Typography>
               <Typography 
               style={{
-                marginBottom: "88px",
+                // marginTop: "88px",
                 font: "normal normal normal 16px Galmuri11",
-                lineHeight : "30px"
+                lineHeight : "30px",
               }}
               id="modal-modal-description" sx={{ mt: 2 }}>
               {detailData?.info ?? ""}
               </Typography>
+
+              <div className="iconContainer">
+              <div className="icon">
+                  {detailData?.ai ? <img src="./image/icon_illustrator.png"/> : <div className="none"></div> }
+                </div>
+                <div className="icon">
+                  {detailData?.psd ? <img src="./image/icon_photoshop.png"/> : <div className="none"></div> }
+                </div>
+                <div className="icon">
+                  {detailData?.xd ? <img src="./image/icon_xd.png"/> : <div className="none"></div> }
+                </div>
+                <div className="icon">
+                  {detailData?.ae ? <img src="./image/icon_aftereffect.png"/> : <div className="none"></div> }
+                </div>
+              </div>
+              <div
+              style={{
+                width : "100%",
+                textAlign : "right",
+                marginBottom : "40px",
+                justifyContent : "center"
+              }}
+              onClick={handleClose}
+              >목록으로 돌아가기
+                <img src="./image/icon_previous.png"
+                style={{ 
+                  marginLeft: "5px"
+                }} />
+              </div>
             </div>  
           </Box>
         </Modal>
-
-
       </div>
   
     );
